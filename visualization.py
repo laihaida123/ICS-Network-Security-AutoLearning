@@ -11,23 +11,9 @@ import os
 
 import platform
 
-# 设置中文字体
-def setup_chinese_font():
-    """配置中文字体支持"""
-    plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
-    plt.rcParams['axes.unicode_minus'] = False
-    
-    # 根据操作系统选择字体
-    system = platform.system()
-    if system == 'Windows':
-        plt.rcParams['font.sans-serif'] = ['Microsoft YaHei', 'SimHei']
-    elif system == 'Darwin':  # macOS
-        plt.rcParams['font.sans-serif'] = ['Arial Unicode MS', 'Heiti TC', 'Songti SC']
-    else:  # Linux
-        plt.rcParams['font.sans-serif'] = ['DejaVu Sans', 'WenQuanYi Zen Hei']
-    
-    print(f"系统检测: {system}")
-    print(f"字体设置: {plt.rcParams['font.sans-serif']}")
+# 在你的文件开头添加这两行
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 黑体
+plt.rcParams['axes.unicode_minus'] = False
 def create_visualizations():
     """创建所有可视化图表"""
     print("📊 生成实验结果可视化图表")
