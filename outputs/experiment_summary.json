@@ -1,0 +1,21 @@
+{
+  "report_title": "工控自学习系统实验报告",
+  "generated_at": "2026-01-01T14:14:40.173471",
+  "experiment_summary": {
+    "total_experiments": 3,
+    "best_configuration": "强力配置",
+    "highest_connection_rules": 36,
+    "highest_value_rules": 2
+  },
+  "attack_detection_summary": {
+    "average_detection_rate": 100.0,
+    "all_passed": true
+  },
+  "key_findings": [
+    "流量大小是影响学习效果的关键因素",
+    "适中的观测阈值（3次）能平衡学习效率和准确性",
+    "系统能100%检测模拟的工控攻击",
+    "值域学习需要更集中的参数观测"
+  ],
+  "visualization_file": "outputs/experiment_visualization_20260101_141434.png"
+}

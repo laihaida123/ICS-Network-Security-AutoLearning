@@ -1,0 +1,13 @@
+{
+  "test_time": "2025-12-31T21:18:46.003831",
+  "whitelist_size": {
+    "communication_rules": 2,
+    "value_rules": 2
+  },
+  "attack_detection": {
+    "total_attacks": 8,
+    "detected_attacks": 8,
+    "detection_rate": 100.0
+  },
+  "test_summary": "系统成功使用学习到的白名单检测多种攻击"
+}

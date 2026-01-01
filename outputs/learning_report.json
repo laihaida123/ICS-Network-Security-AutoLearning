@@ -1,0 +1,36 @@
+{
+  "system_info": {
+    "version": "1.0",
+    "generated_at": "2026-01-01T11:59:15.173666",
+    "total_runtime_seconds": 4756.01227
+  },
+  "learning_context": {
+    "mode": "training",
+    "duration_days": 2,
+    "start_time": "2026-01-01T10:39:59.155388",
+    "end_time": "2026-01-01T11:59:15.173666"
+  },
+  "statistics": {
+    "total_packets_processed": 78754,
+    "total_sessions_observed": 2503,
+    "total_connections_approved": 484
+  },
+  "communication_learning": {
+    "total_connections": 2503,
+    "approved_connections": 484,
+    "rejected_connections": 2019,
+    "approval_rate": 0.19336795844986016,
+    "avg_confidence": 0.19336795844986016
+  },
+  "value_learning": {
+    "total_parameters": 15013,
+    "valid_models": 7658,
+    "invalid_models": 7355,
+    "avg_observations_per_param": 3.042829547725305,
+    "std_dev_multiplier": 3.0
+  },
+  "performance_metrics": {
+    "packets_per_second": 16.558830282412202,
+    "memory_usage_mb": 55.3984375
+  }
+}

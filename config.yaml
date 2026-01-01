@@ -1,0 +1,92 @@
+# ============================================
+# 工控自学习系统 - 配置文件
+# ============================================
+
+learning:
+  mode: "training"  # training | validation | production
+  duration_days: 7  # 学习周期（模拟）
+  min_observation_count: 10  # 最小观测次数阈值
+  min_observation_days: 2    # 最小观测天数
+
+network:
+  # 模拟的工控网段
+  subnet: "192.168.1.0/24"
+  plc_ip_range: 
+    start: "192.168.1.10"
+    end: "192.168.1.20"
+  hmi_ip_range:
+    start: "192.168.1.100"
+    end: "192.168.1.110"
+  
+  # 工控协议端口
+  ports:
+    modbus: 502
+    s7comm: 102
+    opc_ua: 4840
+
+protocols:
+  modbus:
+    enabled: true
+    # Modbus常见功能码
+    function_codes: [1, 2, 3, 4, 5, 6, 15, 16]
+    # 寄存器地址范围
+    coil_range: [0, 9999]
+    input_range: [10000, 19999]
+    holding_range: [40000, 49999]
+
+  # 可扩展其他协议
+  s7comm:
+    enabled: false
+
+statistical:
+  # 通信关系学习参数
+  comm_approval_threshold: 0.85  # 连接批准置信度阈值
+  
+  # 值域学习参数
+  value_std_dev_multiplier: 3.0  # nσ原则的n值
+  min_value_observations: 20     # 值域学习最小样本数
+  
+  # 时间模式参数
+  time_slot_minutes: 15          # 时间分片大小
+
+output:
+  whitelist_file: "outputs/whitelist.yaml"
+  report_file: "outputs/learning_report.json"
+  export_formats: ["yaml", "json", "html"]
+  
+  # 报告生成选项
+  generate_daily_summary: true
+  include_statistics: true
+  include_visualizations: true
+
+simulation:
+  # 流量模拟参数
+  packets_per_hour: 1000
+  peak_hours: [9, 14]  # 流量高峰时段（24小时制）
+  noise_level: 0.05    # 随机噪声比例
+  
+  # 模拟数据类型
+  data_types:
+    temperature:
+      address_range: [40001, 40050]
+      value_range: [20.0, 100.0]
+      unit: "°C"
+    pressure:
+      address_range: [40051, 40100]
+      value_range: [0.5, 10.0]
+      unit: "MPa"
+    flow:
+      address_range: [40101, 40150]
+      value_range: [0.0, 500.0]
+      unit: "m³/h"
+
+logging:
+  level: "INFO"
+  file: "logs/learning_system.log"
+  max_size_mb: 10
+  backup_count: 5
+
+database:
+  type: "sqlite"
+  file: "data/observations.db"
+  cleanup_days: 30  # 自动清理多少天前的数据

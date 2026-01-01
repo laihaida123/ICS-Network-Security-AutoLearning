@@ -1,0 +1,28 @@
+[project]
+name = "white-selflearning"
+version = "1.0"
+description = "about bigdata and thinglink"
+authors = [
+    {name = "laihaida",email = "laihaidada@163.com"}
+]
+readme = "README.md"
+requires-python = "^3.9"
+dependencies = [
+    "scapy (>=2.7.0,<3.0.0)",
+    "numpy (==1.23.5)",
+    "pandas (==1.5.3)",
+    "pyyaml (==6.0)",
+    "psutil (==5.9.4)",
+    "matplotlib (<3.10)"
+]
+
+# 明确告诉Poetry你的包在哪里
+packages = [
+    { include = "simulator", from = "." },
+]
+
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
