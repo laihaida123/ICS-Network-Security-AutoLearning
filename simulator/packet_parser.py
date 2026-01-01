@@ -1,3 +1,4 @@
+# Relative Path: simulator/packet_parser.py
 """
 数据包解析器（软探针）
 负责解析网络数据包，提取工控协议信息

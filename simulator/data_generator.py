@@ -1,3 +1,4 @@
+# Relative Path: simulator/data_generator.py
 """
 工控流量模拟生成器
 模拟真实的工控网络流量，用于系统学习和测试

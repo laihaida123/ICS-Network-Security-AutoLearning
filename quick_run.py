@@ -1,3 +1,4 @@
+# Relative Path: quick_run.py
 #!/usr/bin/env python3
 """
 超快速演示 - 只学习2小时，不保存数据库

@@ -1,3 +1,4 @@
+# Relative Path: simulator/model/models.py
 """
 数据模型定义模块
 定义学习系统中使用的所有核心数据结构

@@ -1,3 +1,4 @@
+# Relative Path: main.py
 #!/usr/bin/env python3
 """
 工控自学习系统主程序
