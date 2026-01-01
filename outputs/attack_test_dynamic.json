@@ -1,0 +1,51 @@
+{
+  "test_time": "2026-01-01T15:08:01.179706",
+  "whitelist_source": "outputs/whitelist.yaml",
+  "whitelist_stats": {
+    "communication_rules": 484,
+    "value_rules": 7658
+  },
+  "test_cases": [
+    {
+      "name": "真实正常连接",
+      "type": "communication",
+      "expected": "pass",
+      "actual": "pass"
+    },
+    {
+      "name": "陌生IP攻击（基于真实目标）",
+      "type": "communication",
+      "expected": "block",
+      "actual": "block"
+    },
+    {
+      "name": "端口扫描攻击",
+      "type": "communication",
+      "expected": "block",
+      "actual": "block"
+    },
+    {
+      "name": "真实正常值域",
+      "type": "value",
+      "expected": "pass",
+      "actual": "pass"
+    },
+    {
+      "name": "异常值攻击",
+      "type": "value",
+      "expected": "block",
+      "actual": "block"
+    },
+    {
+      "name": "陌生地址攻击",
+      "type": "value",
+      "expected": "block",
+      "actual": "block"
+    }
+  ],
+  "attack_detection": {
+    "total_attacks": 4,
+    "detected_attacks": 4,
+    "detection_rate": 100.0
+  }
+}

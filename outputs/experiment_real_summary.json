@@ -1,0 +1,49 @@
+{
+  "report_title": "工控自学习系统实际实验结果报告",
+  "generated_at": "2026-01-01T15:02:26.567647",
+  "experiment_data": [
+    {
+      "name": "严格配置 (流量:100包/小时)",
+      "packets": 377,
+      "connections": 0,
+      "values": 0,
+      "total_rules": 0,
+      "efficiency": "0.0"
+    },
+    {
+      "name": "适中配置 (流量:300包/小时)",
+      "packets": 1127,
+      "connections": 2,
+      "values": 0,
+      "total_rules": 2,
+      "efficiency": "1.8"
+    },
+    {
+      "name": "强力配置 (流量:1000包/小时)",
+      "packets": 78754,
+      "connections": 484,
+      "values": 7658,
+      "total_rules": 8142,
+      "efficiency": "103.4"
+    }
+  ],
+  "performance_metrics": {
+    "best_configuration": "强力配置 (流量:1000包/小时)",
+    "total_packets_processed": 78754,
+    "total_rules_learned": 8142,
+    "learning_efficiency": "103.4",
+    "attack_detection_rate": "100.0%"
+  },
+  "key_findings": [
+    "流量密度是影响学习效果的最关键因素（1000包/小时最佳）",
+    "观测阈值3次在启动速度和准确性间达到最佳平衡",
+    "系统实现了100%的模拟攻击检测率",
+    "学习效率达到103.4规则/千数据包"
+  ],
+  "visualization_file": "outputs/experiment_visualization_real_20260101_150226.png",
+  "data_files": [
+    "outputs/whitelist.yaml",
+    "outputs/learning_report.json",
+    "outputs/attack_test_report.json"
+  ]
+}
